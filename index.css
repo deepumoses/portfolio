@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-canvas: #ffffff;
+  --color-inverse-canvas: #000000;
+  --color-surface-soft: #f5f5f5;
+  --color-hairline: #d9d9d9;
+  --color-hairline-soft: #eaeaea;
+  --color-ink: #000000;
+  --color-inverse-ink: #ffffff;
+  --color-block-lime: #d4f765;
+  --color-block-lilac: #d9c2ff;
+  --color-block-cream: #f7f3e8;
+  --color-block-mint: #b8f2d6;
+  --color-block-pink: #ffc6e3;
+  --color-block-coral: #ff9d7e;
+  --color-block-navy: #141436;
+  --color-accent-magenta: #e11d84;
+  --color-semantic-success: #0fa958;
+}
+
+:root {
+  font-feature-settings: "kern" 1;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-weight: 330;
+  background-color: #ffffff;
+  color: #000000;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fine variable weight utilities mirroring figmaSans weight modulation */
+.fw-320 {
+  font-weight: 320;
+}
+.fw-330 {
+  font-weight: 330;
+}
+.fw-340 {
+  font-weight: 340;
+}
+.fw-450 {
+  font-weight: 450;
+}
+.fw-480 {
+  font-weight: 480;
+}
+.fw-540 {
+  font-weight: 540;
+}
+.fw-700 {
+  font-weight: 700;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 34s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
