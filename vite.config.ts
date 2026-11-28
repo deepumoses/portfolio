@@ -51,7 +51,7 @@ export default defineConfig(({ command }) => {
       host: '0.0.0.0',
     },
     build: {
-      outDir: 'release',
+      outDir: 'docs',
       emptyOutDir: true,
       copyPublicDir: false,
       assetsDir: 'assets',

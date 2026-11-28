@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@source not "./release";
+@source not "./docs";
 
 @theme {
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
